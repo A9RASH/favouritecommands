@@ -1,0 +1,66 @@
+.vc-slash-favs {
+    position: fixed;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.vc-slash-favs::-webkit-scrollbar {
+    display: none;
+}
+
+.vc-slash-favs-btn {
+    flex: 0 0 auto;
+    max-width: 180px;
+    padding: 4px 10px;
+    color: var(--text-default, var(--text-normal, #dbdee1));
+    background: var(--background-modifier-selected, rgba(255, 255, 255, 0.06));
+    border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+    border-radius: 999px;
+    font-family: var(--font-primary, "gg sans", "Noto Sans", sans-serif);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.vc-slash-favs-btn:hover {
+    color: var(--text-strong, var(--header-primary, #f2f3f5));
+    background: var(--background-modifier-hover, rgba(255, 255, 255, 0.1));
+    border-color: var(--brand-500, #5865f2);
+}
+
+.vc-slash-favs-btn:active {
+    background: var(--brand-500, #5865f2);
+    color: var(--button-primary-text, #fff);
+}
+
+.vc-slash-favs-btn:focus-visible {
+    outline: 2px solid var(--brand-500, #5865f2);
+    outline-offset: 2px;
+}
+
+.vc-slash-favs-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.vc-slash-favs-row > div {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vc-slash-favs-btn {
+        transition: none;
+    }
+}
